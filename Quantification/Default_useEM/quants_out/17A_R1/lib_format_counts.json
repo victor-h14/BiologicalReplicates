@@ -1,0 +1,21 @@
+{
+    "read_files": "[ 17A_R1_trim.fastq.gz, 17A_R2_trim.fastq.gz]",
+    "expected_format": "ISR",
+    "compatible_fragment_ratio": 1.0,
+    "num_compatible_fragments": 15191857,
+    "num_assigned_fragments": 15191857,
+    "num_frags_with_consistent_mappings": 15009737,
+    "num_frags_with_inconsistent_or_orphan_mappings": 182120,
+    "MSF": 0,
+    "OSF": 0,
+    "ISF": 0,
+    "MSR": 0,
+    "OSR": 0,
+    "ISR": 15009737,
+    "SF": 88507,
+    "SR": 93613,
+    "MU": 0,
+    "OU": 0,
+    "IU": 0,
+    "U": 0
+}

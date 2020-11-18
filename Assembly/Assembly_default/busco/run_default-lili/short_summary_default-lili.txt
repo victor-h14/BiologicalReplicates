@@ -1,0 +1,15 @@
+# BUSCO version is: 3.1.0 
+# The lineage dataset is: liliopsida_odb10 (Creation date: 2017-12-01, number of species: 18, number of BUSCOs: 3278)
+# To reproduce this run: python Programs/busco/scripts/run_BUSCO.py -i Assembly/Assembly_default/output-trinity-default.Trinity.fasta -o default-lili -l Programs/busco/liliopsida_odb10/ -m transcriptome -c 6
+#
+# Summarized benchmarking in BUSCO notation for file Assembly/Assembly_default/output-trinity-default.Trinity.fasta
+# BUSCO was run in mode: transcriptome
+
+	C:93.1%[S:19.9%,D:73.2%],F:4.9%,M:2.0%,n:3278
+
+	3050	Complete BUSCOs (C)
+	651	Complete and single-copy BUSCOs (S)
+	2399	Complete and duplicated BUSCOs (D)
+	159	Fragmented BUSCOs (F)
+	69	Missing BUSCOs (M)
+	3278	Total BUSCO groups searched

@@ -1,0 +1,85 @@
+[2019-04-26 13:45:55.504] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2019-04-26 13:45:55.504] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2019-04-26 13:45:55.504] [jointLog] [info] Usage of --validateMappings, without --hardFilter implies use of range factorization. rangeFactorizationBins is being set to 4
+[2019-04-26 13:45:55.504] [jointLog] [info] Usage of --validateMappings implies a default consensus slack of 0.2. Setting consensusSlack to 0.2.
+[2019-04-26 13:45:55.504] [jointLog] [info] parsing read library format
+[2019-04-26 13:45:55.504] [jointLog] [info] There is 1 library.
+[2019-04-26 13:45:55.627] [jointLog] [info] Loading Quasi index
+[2019-04-26 13:45:55.627] [jointLog] [info] Loading 32-bit quasi index
+[2019-04-26 13:46:11.842] [jointLog] [info] done
+[2019-04-26 13:46:11.842] [jointLog] [info] Index contained 598,874 targets
+[2019-04-26 13:47:41.786] [jointLog] [info] Thread saw mini-batch with a maximum of 1.48% zero probability fragments
+[2019-04-26 13:47:41.798] [jointLog] [info] Thread saw mini-batch with a maximum of 1.60% zero probability fragments
+[2019-04-26 13:47:41.907] [jointLog] [info] Thread saw mini-batch with a maximum of 1.70% zero probability fragments
+[2019-04-26 13:47:42.029] [jointLog] [info] Thread saw mini-batch with a maximum of 1.50% zero probability fragments
+[2019-04-26 13:47:42.030] [jointLog] [info] Thread saw mini-batch with a maximum of 1.50% zero probability fragments
+[2019-04-26 13:47:42.078] [jointLog] [info] Thread saw mini-batch with a maximum of 1.52% zero probability fragments
+[2019-04-26 13:47:42.082] [jointLog] [info] Thread saw mini-batch with a maximum of 1.48% zero probability fragments
+[2019-04-26 13:47:42.095] [jointLog] [info] Thread saw mini-batch with a maximum of 1.54% zero probability fragments
+[2019-04-26 13:47:42.110] [jointLog] [info] Thread saw mini-batch with a maximum of 1.48% zero probability fragments
+[2019-04-26 13:47:42.146] [jointLog] [info] Thread saw mini-batch with a maximum of 1.56% zero probability fragments
+[2019-04-26 13:47:42.174] [jointLog] [info] Thread saw mini-batch with a maximum of 1.48% zero probability fragments
+[2019-04-26 13:47:42.174] [jointLog] [info] Thread saw mini-batch with a maximum of 1.64% zero probability fragments
+[2019-04-26 13:47:42.180] [jointLog] [info] Thread saw mini-batch with a maximum of 1.42% zero probability fragments
+[2019-04-26 13:47:42.189] [jointLog] [info] Thread saw mini-batch with a maximum of 1.42% zero probability fragments
+[2019-04-26 13:47:42.189] [jointLog] [info] Thread saw mini-batch with a maximum of 1.56% zero probability fragments
+[2019-04-26 13:47:42.193] [jointLog] [info] Thread saw mini-batch with a maximum of 1.56% zero probability fragments
+[2019-04-26 13:47:42.210] [jointLog] [info] Thread saw mini-batch with a maximum of 1.58% zero probability fragments
+[2019-04-26 13:47:42.233] [jointLog] [info] Thread saw mini-batch with a maximum of 1.66% zero probability fragments
+[2019-04-26 13:47:42.252] [jointLog] [info] Thread saw mini-batch with a maximum of 1.52% zero probability fragments
+[2019-04-26 13:47:42.264] [jointLog] [info] Thread saw mini-batch with a maximum of 1.48% zero probability fragments
+[2019-04-26 13:47:42.267] [jointLog] [info] Thread saw mini-batch with a maximum of 1.48% zero probability fragments
+[2019-04-26 13:47:42.292] [jointLog] [info] Thread saw mini-batch with a maximum of 1.46% zero probability fragments
+[2019-04-26 13:47:42.322] [jointLog] [info] Thread saw mini-batch with a maximum of 1.46% zero probability fragments
+[2019-04-26 13:47:42.322] [jointLog] [info] Thread saw mini-batch with a maximum of 1.48% zero probability fragments
+[2019-04-26 13:47:42.337] [jointLog] [info] Thread saw mini-batch with a maximum of 1.62% zero probability fragments
+[2019-04-26 13:47:42.341] [jointLog] [info] Thread saw mini-batch with a maximum of 1.46% zero probability fragments
+[2019-04-26 13:47:42.347] [jointLog] [info] Thread saw mini-batch with a maximum of 1.56% zero probability fragments
+[2019-04-26 13:47:42.352] [jointLog] [info] Thread saw mini-batch with a maximum of 1.50% zero probability fragments
+[2019-04-26 13:47:42.353] [jointLog] [info] Thread saw mini-batch with a maximum of 1.52% zero probability fragments
+[2019-04-26 13:47:42.353] [jointLog] [info] Thread saw mini-batch with a maximum of 1.50% zero probability fragments
+[2019-04-26 13:47:44.266] [jointLog] [info] Computed 688,651 rich equivalence classes for further processing
+[2019-04-26 13:47:44.266] [jointLog] [info] Counted 13,679,709 total reads in the equivalence classes 
+[2019-04-26 13:47:44.477] [jointLog] [info] Number of mappings discarded because of alignment score : 931,479
+[2019-04-26 13:47:44.481] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 283,978
+[2019-04-26 13:47:44.481] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings : 2,655,796
+[2019-04-26 13:47:44.481] [jointLog] [info] Mapping rate = 77.6202%
+
+[2019-04-26 13:47:44.481] [jointLog] [info] finished quantifyLibrary()
+[2019-04-26 13:47:44.482] [jointLog] [info] Starting optimizer
+[2019-04-26 13:47:44.268] [fileLog] [info] 
+At end of round 0
+==================
+Observed 17623905 total fragments (17623905 in most recent round)
+
+[2019-04-26 13:47:45.539] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2019-04-26 13:47:45.591] [jointLog] [info] iteration = 0 | max rel diff. = 16.14
+[2019-04-26 13:47:46.033] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
+[2019-04-26 13:48:07.513] [jointLog] [info] Computed expected counts (for bias correction)
+[2019-04-26 13:48:07.513] [jointLog] [info] processed bias for 0.0% of the transcripts
+[2019-04-26 13:48:10.148] [jointLog] [info] processed bias for 10.0% of the transcripts
+[2019-04-26 13:48:12.691] [jointLog] [info] processed bias for 20.0% of the transcripts
+[2019-04-26 13:48:15.540] [jointLog] [info] processed bias for 30.0% of the transcripts
+[2019-04-26 13:48:18.747] [jointLog] [info] processed bias for 40.0% of the transcripts
+[2019-04-26 13:48:21.820] [jointLog] [info] processed bias for 50.0% of the transcripts
+[2019-04-26 13:48:24.821] [jointLog] [info] processed bias for 60.0% of the transcripts
+[2019-04-26 13:48:25.427] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2019-04-26 13:48:28.344] [jointLog] [info] iteration = 100 | max rel diff. = 0.0960471
+[2019-04-26 13:48:32.387] [jointLog] [info] iteration = 200 | max rel diff. = 0.0561774
+[2019-04-26 13:48:36.397] [jointLog] [info] iteration = 300 | max rel diff. = 0.0388868
+[2019-04-26 13:48:40.192] [jointLog] [info] iteration = 400 | max rel diff. = 0.0260176
+[2019-04-26 13:48:43.828] [jointLog] [info] iteration = 500 | max rel diff. = 0.0235341
+[2019-04-26 13:48:47.444] [jointLog] [info] iteration = 600 | max rel diff. = 0.0181722
+[2019-04-26 13:48:51.520] [jointLog] [info] iteration = 700 | max rel diff. = 0.0196971
+[2019-04-26 13:48:54.822] [jointLog] [info] iteration = 800 | max rel diff. = 0.0142217
+[2019-04-26 13:48:58.012] [jointLog] [info] iteration = 900 | max rel diff. = 0.0122953
+[2019-04-26 13:49:01.213] [jointLog] [info] iteration = 1,000 | max rel diff. = 0.0118653
+[2019-04-26 13:49:03.724] [jointLog] [info] iteration = 1,089 | max rel diff. = 0.00990415
+[2019-04-26 13:49:03.820] [jointLog] [info] Finished optimizer
+[2019-04-26 13:49:03.820] [jointLog] [info] writing output 
+
+[2019-04-26 13:49:05.289] [jointLog] [info] Computing gene-level abundance estimates
+[2019-04-26 13:49:06.257] [jointLog] [info] There were 598874 transcripts mapping to 262281 genes
+[2019-04-26 13:49:06.257] [jointLog] [info] NOTE: We recommend using tximport (https://bioconductor.org/packages/release/bioc/html/tximport.html) for aggregating transcript-level salmon abundance estimates to the gene level.  It is more versatile, exposes more features, and allows considering multi-sample information during aggregation.
+[2019-04-26 13:49:07.725] [jointLog] [info] Aggregating expressions to gene level
+[2019-04-26 13:49:08.413] [jointLog] [info] done

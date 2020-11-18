@@ -1,0 +1,14 @@
+{
+    "salmon_version": "0.13.1",
+    "threads": "30",
+    "index": "/data1/victorhm/assembly/default.Trinity.fasta.index",
+    "libType": "ISR",
+    "mates1": "14C_S25_L003_R1_trim.fastq.gz",
+    "mates2": "14C_S25_L003_R2_trim.fastq.gz",
+    "geneMap": "/data1/victorhm/assembly/default.Trinity.fasta.map",
+    "validateMappings": [],
+    "gcBias": [],
+    "useEM": [],
+    "output": "/data1/victorhm/assembly/quant_useEM/quants_out/14C_S25_L003_R1",
+    "auxDir": "aux_info"
+}

@@ -1,0 +1,30 @@
+OTHERS:
+
+number of genes: 262281
+number of transcripts: 598874
+average length of transcripts: 932.63
+genes w/ 1 transcript: 0.643
+genes w/ 2 transcript: 0.137
+genes w/ 3 transcript: 0.059
+largest number of transcripts for a gene: 49
+
+TRINITY:
+Contig N10: 4295
+Contig N20: 3277
+Contig N30: 2618
+Contig N40: 2124
+Contig N50: 1687
+Median contig length: 495
+Average contig: 932.63
+Total assembled bases: 558526632
+
+BUSCO:
+
+ALL_ISOFORMS
+VIRIDIPLANTAE	C:95.1%[S:15.8%,D:79.3%],F:4.2%,M:0.7%,n:430
+LILIOPSIDA	C:93.1%[S:19.9%,D:73.2%],F:4.9%,M:2.0%,n:3278
+
+LONG_ISOFORM
+VIRIDIPLANTAE	C:72.3%[S:70.9%,D:1.4%],F:23.0%,M:4.7%,n:430
+LILIOPSIDA	C:69.9%[S:68.0%,D:1.9%],F:19.0%,M:11.1%,n:3278
+

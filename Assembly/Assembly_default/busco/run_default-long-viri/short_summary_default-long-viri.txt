@@ -1,0 +1,15 @@
+# BUSCO version is: 3.1.0 
+# The lineage dataset is: viridiplantae_odb10 (Creation date: 2017-12-01, number of species: 72, number of BUSCOs: 430)
+# To reproduce this run: python Programs/busco/scripts/run_BUSCO.py -i Assembly/Assembly_default/longest-isoform-default.Trinity.fasta -o default-long-viri -l Programs/busco/viridiplantae_odb10/ -m transcriptome -c 6
+#
+# Summarized benchmarking in BUSCO notation for file Assembly/Assembly_default/longest-isoform-default.Trinity.fasta
+# BUSCO was run in mode: transcriptome
+
+	C:72.3%[S:70.9%,D:1.4%],F:23.0%,M:4.7%,n:430
+
+	311	Complete BUSCOs (C)
+	305	Complete and single-copy BUSCOs (S)
+	6	Complete and duplicated BUSCOs (D)
+	99	Fragmented BUSCOs (F)
+	20	Missing BUSCOs (M)
+	430	Total BUSCO groups searched

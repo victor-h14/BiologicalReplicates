@@ -1,0 +1,21 @@
+{
+    "read_files": "[ 1D_S24_L003_R1_trim.fastq.gz, 1D_S24_L003_R2_trim.fastq.gz]",
+    "expected_format": "ISR",
+    "compatible_fragment_ratio": 1.0,
+    "num_compatible_fragments": 16463592,
+    "num_assigned_fragments": 16463592,
+    "num_frags_with_consistent_mappings": 16217724,
+    "num_frags_with_inconsistent_or_orphan_mappings": 245868,
+    "MSF": 0,
+    "OSF": 0,
+    "ISF": 0,
+    "MSR": 0,
+    "OSR": 0,
+    "ISR": 16217724,
+    "SF": 122906,
+    "SR": 122962,
+    "MU": 0,
+    "OU": 0,
+    "IU": 0,
+    "U": 0
+}
