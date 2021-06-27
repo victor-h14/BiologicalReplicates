@@ -61,6 +61,17 @@ for (rep in list("SBC", "SBDG")) {
   y[[rep]] = calcNormFactors(y[[rep]])
 }
 
+# Common genes after filter
+common_kept = rownames(y$SBC$counts)[rownames(y$SBC$counts) %in% rownames(y$SBDG$counts)]
+pdf("venn.pdf", width = 4, height = 3.5)
+grid.newpage()
+draw.pairwise.venn(area1 = nrow(y$SBC$counts), area2 = nrow(y$SBDG$counts),
+                   cross.area = length(common_kept), 
+                   fill = c("#50b9e1", "#45b833"),
+                   ext.dist = rep(0.05, 2), 
+                   cex = rep(0.8, 3))
+dev.off()
+
 # MDS 
 mds_plot = list()
 for (rep in list("SBC", "SBDG")) {
@@ -97,8 +108,6 @@ for (rep in list("SBC", "SBDG")) {
 }
 
 # Comparison of BCVs
-
-common_kept = rownames(y$SBC$counts)[rownames(y$SBC$counts) %in% rownames(y$SBDG$counts)]
 sbc_disp = y$SBC$tagwise.dispersion[which(rownames(y$SBC$counts) %in% common_kept)]
 sbdg_disp = y$SBDG$tagwise.dispersion[which(rownames(y$SBDG$counts) %in% common_kept)]
 mean(sbdg_disp > sbc_disp)
