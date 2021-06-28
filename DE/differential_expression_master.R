@@ -17,7 +17,6 @@ extrafont::loadfonts(device = "postscript")
 source("~/Git/ggplot_theme_Publication/ggplot_theme_Publication-2.R")
 
 # Getting the data
-setwd("~/Git/Victor_MS_2018/Master/DE/")
 folders = list.files("../Quantification/Default_useEM/quants_out/")
 load("sugarcane_counts_go.RData")
   
@@ -49,6 +48,14 @@ files = file.path("../Quantification/Default_useEM/quants_out", folders, "quant.
 names(files) = folders
 tx2gene = read.table("../Assembly/Assembly_default/default.Trinity.fasta.map")
 txi = tximport(files, type = "salmon", tx2gene = tx2gene)
+
+# Physiological data
+read.csv("../Physiologic/data.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE) %>%
+  filter(Geno %in% casefold(experiment$genotypes, upper = TRUE)) %>%
+  mutate(Geno = factor(Geno)) %>%
+  group_by(Geno) %>%
+  summarise(mean = mean(BRIX_Lab), sd = sd(BRIX_Lab), n = n()) %>%
+  arrange(mean, desc = T)
 
 # Delete low expression genes and normalization
 y = list()
