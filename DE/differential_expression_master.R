@@ -128,7 +128,7 @@ contrasts = list("VLBxVHB.HB.LB" = VLBxVHB.HB.LB, "VHBxHB.LB" = VHBxHB.LB, "HBxL
 
 # Differential expression
 DE = list()
-de_df = data.frame(logFC = c(), logCPM = c(), DE = c(), contrast = c(), strategy = c())
+de_df = data.frame(gene = c(), logFC = c(), logCPM = c(), DE = c(), contrast = c(), strategy = c())
 
 for (rep in list("SBC", "SBDG")) {
   for (con in list("VLBxVHB.HB.LB", "VHBxHB.LB", "HBxLB")) {
@@ -138,7 +138,8 @@ for (rep in list("SBC", "SBDG")) {
   DE[[paste(rep, con)]] = contrast_de
   
   lrt_df = as.data.frame(lrt$table) %>%
-    mutate(DE = as.numeric(contrast_de),
+    mutate(gene = rownames(.),
+           DE = as.numeric(contrast_de),
            contrast = con,
            strategy = rep) %>%
     dplyr::select(-c(LR, PValue))
@@ -162,6 +163,8 @@ ggplot(de_df) +
   theme_Publication(base_family = "Helvetica")
 
 ggsave(filename = "ma.tiff", width = 8, height = 5)
+de_df = de_df[,c(3,2,1,4,5,6)]
+write.csv(de_df, "FileS1.csv", row.names = F, col.names = T)
 
 # Gene Ontology annotation
 sugarcane_GO_file = read.table("../Annotation/go_annotation.txt", col.names = c("gene", "GO"), stringsAsFactors = F)
@@ -206,6 +209,7 @@ for (rep in list("SBC", "SBDG")) {
 
 # Funcional enrichment
 enrichment_df = list()
+go = data.frame(GO = c(), pvalue = c(), numDEInCat = c(), numInCat = c(), term = c(), contrast = c(), strategy = c())
 for (con in list("VLBxVHB.HB.LB", "VHBxHB.LB", "HBxLB")) {
   enrichment_df[[con]] = data.frame()
 }
@@ -230,8 +234,17 @@ for (rep in list("SBC", "SBDG")) {
                    Number = go_table$numDEInCat[enriched],
                    Ontology = go_table$ontology[enriched]))
     }
+    
+    go_table$FDR = go_FDR
+    go_table$contrast = con
+    go_table$strategy = rep
+    go_table = go_table[,-c(2,3,7)]
+    
+    go = rbind(go, go_table)
   }
 }
+
+write.csv(go, "FileS2.csv")
 
 enrichment_plot = list()
 for (con in list("VLBxVHB.HB.LB", "VHBxHB.LB", "HBxLB")) {
