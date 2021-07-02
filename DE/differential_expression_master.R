@@ -193,9 +193,15 @@ annotation_GO %>%
 
 # Terms in assembly
 length(unique(sugarcane_GO$gene))
-length(keep[["SBC"]])
+
 sum(unique(sugarcane_GO$gene) %in% names(which(keep[["SBC"]])))
 sum(unique(sugarcane_GO$gene) %in% names(which(keep[["SBDG"]])))
+
+length(unique(sugarcane_GO$GO[sugarcane_GO$gene %in% names(which(keep[["SBC"]]))]))
+length(unique(sugarcane_GO$GO[sugarcane_GO$gene %in% names(which(keep[["SBDG"]]))]))
+
+write.table(names(keep[["SBC"]][keep[["SBC"]]]), "SBC.csv", quote = F, row.names = F, col.names = F)
+write.table(names(keep[["SBDG"]][keep[["SBDG"]]]), "SBDG.csv", quote = F, row.names = F, col.names = F)
 
 
 # Calculating weighted lenghts

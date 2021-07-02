@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-files = ["Master/Assembly/Assembly_default/default.Trinity.fasta"]
+files = ["../Assembly/Assembly_default/default.Trinity/default.Trinity.fasta", "SBC.fasta", "SBDG.fasta"]
 plt.figure(1, figsize=(1, 1))
 
 
@@ -56,17 +56,19 @@ for i in range(len(files)):
     labels = dict_isoforms.keys()
     sizes = dict_isoforms.values()
     
-    plt.subplot(2,1, i+1)
+    plt.subplot(len(files),1, i+1)
     plt.title("Assembly " + str(i + 1))
     plt.bar(labels, sizes)
     
     print("number of genes:", len(dict_gene))
     print("number of transcripts:", len(lens))
-    print("average length of transcripts:", np.round(sum(lens)/len(lens), 2))
+    print("mean length of transcripts:", np.round(sum(lens)/len(lens), 2))
+    print("median length of transcripts:", np.median(lens))
     
     print("genes w/ 1 transcript:", np.round(sum([i == 1 for i in dict_gene.values()])/len(dict_gene.values()), 3))
     print("genes w/ 2 transcript:", np.round(sum([i == 2 for i in dict_gene.values()])/len(dict_gene.values()), 3))
     print("genes w/ 3 transcript:", np.round(sum([i == 3 for i in dict_gene.values()])/len(dict_gene.values()), 3))
+    print("genes w/ > 4 transcript:", np.round(sum([i > 3 for i in dict_gene.values()])/len(dict_gene.values()), 3))
     print("largest number of transcripts for a gene:", max(dict_gene.values()))
     
     max_value = max(dict_gene.values())
