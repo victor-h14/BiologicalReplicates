@@ -179,17 +179,12 @@ for (i in 1:nrow(sugarcane_GO_file)) {
 
 annotation_GO = sugarcane_GO %>%
   group_by(GO) %>%
-  summarise(n = n()) %>%
+  mutate(Genes = paste(gene, collapse = ", ")) %>%
   mutate(Term = Term(as.character(GO)),
          Ontology = Ontology(as.character(GO))) %>%
-  arrange(-n)
-
-annotation_GO %>%
-  group_by(Ontology) %>%
-  summarise(q = sum(n)) %>%
-  ggplot() + geom_bar(aes(x = "", y = q/sum(q), fill = Ontology), width = 1, stat = "identity") +
-  coord_polar(theta = "y", start = 3) + theme_void()
-
+  select(GO, Term, Ontology, Genes) %>%
+  unique() %>%
+  write.csv("FileS2.csv", row.names = FALSE)
 
 # Terms in assembly
 length(unique(sugarcane_GO$gene))
@@ -250,7 +245,6 @@ for (rep in list("SBC", "SBDG")) {
   }
 }
 
-write.csv(go, "FileS2.csv")
 
 enrichment_plot = list()
 for (con in list("VLBxVHB.HB.LB", "VHBxHB.LB", "HBxLB")) {
